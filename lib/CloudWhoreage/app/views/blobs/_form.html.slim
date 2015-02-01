@@ -1,0 +1,11 @@
+= simple_form_for(@blob) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :app
+    = f.association :user
+    = f.input :data
+    = f.input :status
+
+  .form-actions
+    = f.button :submit

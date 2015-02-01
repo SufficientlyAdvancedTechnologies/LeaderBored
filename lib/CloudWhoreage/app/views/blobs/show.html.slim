@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong App:
+  = @blob.app
+p
+  strong User:
+  = @blob.user
+p
+  strong Data:
+  = @blob.data
+p
+  strong Status:
+  = @blob.status
+
+= link_to 'Edit', edit_blob_path(@blob)
+'|
+= link_to 'Back', blobs_path

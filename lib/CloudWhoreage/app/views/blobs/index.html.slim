@@ -1,0 +1,27 @@
+h1 Listing blobs
+
+table
+  thead
+    tr
+      th App
+      th User
+      th Data
+      th Status
+      th
+      th
+      th
+
+  tbody
+    - @blobs.each do |blob|
+      tr
+        td = blob.app
+        td = blob.user
+        td = blob.data
+        td = blob.status
+        td = link_to 'Show', blob
+        td = link_to 'Edit', edit_blob_path(blob)
+        td = link_to 'Destroy', blob, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Blob', new_blob_path
