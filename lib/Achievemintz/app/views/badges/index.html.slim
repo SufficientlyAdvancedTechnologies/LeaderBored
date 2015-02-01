@@ -1,0 +1,27 @@
+h1 Listing badges
+
+table
+  thead
+    tr
+      th Achievement
+      th Player
+      th Multiplier
+      th Status
+      th
+      th
+      th
+
+  tbody
+    - @badges.each do |badge|
+      tr
+        td = badge.achievement
+        td = badge.player
+        td = badge.multiplier
+        td = badge.status
+        td = link_to 'Show', badge
+        td = link_to 'Edit', edit_badge_path(badge)
+        td = link_to 'Destroy', badge, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Badge', new_badge_path

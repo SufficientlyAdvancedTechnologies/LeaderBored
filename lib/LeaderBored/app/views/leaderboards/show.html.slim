@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Created by:
+  = @leaderboard.created_by
+p
+  strong Created at:
+  = @leaderboard.created_at
+p
+  strong Name:
+  = @leaderboard.name
+p
+  strong Description:
+  = @leaderboard.description
+p
+  strong Status:
+  = @leaderboard.status
+
+= link_to 'Edit', edit_leaderboard_path(@leaderboard)
+'|
+= link_to 'Back', leaderboards_path

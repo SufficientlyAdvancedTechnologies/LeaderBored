@@ -1,0 +1,10 @@
+= simple_form_for(@score) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :leaderboard
+    = f.association :player
+    = f.input :score
+
+  .form-actions
+    = f.button :submit

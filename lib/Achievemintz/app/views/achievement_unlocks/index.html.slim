@@ -1,0 +1,25 @@
+h1 Listing achievement_unlocks
+
+table
+  thead
+    tr
+      th Player
+      th Progression
+      th Status
+      th
+      th
+      th
+
+  tbody
+    - @achievement_unlocks.each do |achievement_unlock|
+      tr
+        td = achievement_unlock.player
+        td = achievement_unlock.progression
+        td = achievement_unlock.status
+        td = link_to 'Show', achievement_unlock
+        td = link_to 'Edit', edit_achievement_unlock_path(achievement_unlock)
+        td = link_to 'Destroy', achievement_unlock, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Achievement unlock', new_achievement_unlock_path

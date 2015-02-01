@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Achievement:
+  = @badge.achievement
+p
+  strong Player:
+  = @badge.player
+p
+  strong Multiplier:
+  = @badge.multiplier
+p
+  strong Status:
+  = @badge.status
+
+= link_to 'Edit', edit_badge_path(@badge)
+'|
+= link_to 'Back', badges_path
