@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Leaderboard:
+  = @score.leaderboard
+p
+  strong Player:
+  = @score.player
+p
+  strong Score:
+  = @score.score
+
+= link_to 'Edit', edit_score_path(@score)
+'|
+= link_to 'Back', scores_path

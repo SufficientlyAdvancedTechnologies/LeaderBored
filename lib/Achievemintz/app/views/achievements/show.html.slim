@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Created by:
+  = @achievement.created_by
+p
+  strong Name:
+  = @achievement.name
+p
+  strong Status:
+  = @achievement.status
+
+= link_to 'Edit', edit_achievement_path(@achievement)
+'|
+= link_to 'Back', achievements_path
